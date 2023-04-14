@@ -1,0 +1,184 @@
+/* Common styles for all screen sizes */
+.main {
+    display: flex;
+    font-family: "IBM Plex Sana Thai Looped", sans-serif;
+    color: white;
+    background: linear-gradient(179deg, #7ea9e9, #ec7aec);
+    text-shadow: 1px 0px 2px #8dc4f0;
+  }
+  
+  .body_container {
+    flex: 1;
+    background-image: url(../../images/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .sidebar_container {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin:15px;
+  }
+  
+  .sidebar {
+    display: flex;
+    width: 250px;
+    height: 90%;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 15px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  
+  .lines_icon {
+    display: flex;
+    align-self: flex-end;
+    border-radius: 5px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .profile > img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  
+  .groups {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  h3 {
+    font-size: 1rem;
+    margin: 10px 0px 10px 0px;
+  }
+  
+  /* Media queries for different screen sizes */
+  @media only screen and (max-width: 768px) {
+    .sidebar_container {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .sidebar {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .booklist, .book-details{
+      padding: 3rem 0;
+      background-color: #f8f9fa;
+  }
+  .booklist-content{
+      gap: 3rem;
+  }
+  .book-item{
+      padding: 3rem 2rem;
+      border-radius: 34px;
+      background-color: rgb(251, 4, 4);
+      box-shadow: rgba(148, 61, 61, 0.05).05 5px 10px 20px 5px;
+      transition: var(--transition);
+  }
+  .book-item:hover{
+      box-shadow: rgb(1, 14, 255) 10px 15px 35px 10px;
+      transform: scale(1.05);
+  }
+  .book-item-img img{
+      max-width: 180px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  
+  
+  
+  .save-icon :hover{
+      color:#1500ff
+  }
+  .book-item-info{
+      margin-top: 2rem;
+  }
+  .book-item-info-item.title{
+      line-height: 1.4;
+      margin-bottom: 0.8rem;
+  }
+  .book-item-info-item.author{
+      line-height: 1.4;
+      margin-bottom: 4px;
+  }
+  .book-item-info-item:not(.book-item-info-item.title) span:last-child{
+      opacity: 0.8;
+  }
+  .book-item-info-item.publish-year{
+      opacity: 0.6;
+      font-style: italic;
+      font-size: 14px;
+  }
+  .save-btn {
+      background-color: #1500ff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .save-btn:hover {
+      background-color: #000d85;
+    }
+  
+  @media screen and (min-width: 600px){
+      .booklist-content{
+          grid-template-columns: repeat(2, 1fr);
+      }
+  }
+  
+  @media screen and (min-width: 992px){
+      .booklist-content{
+          grid-template-columns: repeat(3, 1fr);
+      }
+      .book-item-img img{
+          max-width: 150px;
+      }
+  }
+  
+  @media screen and (min-width: 992px){
+      .booklist-content{
+          grid-template-columns: repeat(4, 1fr);
+      }
+      .book-item-img img{
+          max-width: 120px;
+      }
+  }
+  }
+  
